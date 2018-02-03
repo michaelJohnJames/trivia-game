@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   
 
   resources :questions
+  resources :scores
 
   root 'welcomes#index'
 
