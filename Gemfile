@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 #added gems
-#gem 'HTTParty'
+gem 'httparty', '~> 0.15.6'
 gem 'react-rails'
 gem 'webpacker'
 
