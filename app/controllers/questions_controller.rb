@@ -1,13 +1,17 @@
 class QuestionsController < ApplicationController
   def index
+    @questions = HTTParty.get('http://jservice.io/api/clues', :headers => {'Content-Type' => 'application/json'})
+    #@token = JSON.parse(@question)['question']
 
-  @response = HTTParty.get("http://jservice.io/api/random.json").parsed_response
+  #@response = HTTParty.get("http://jservice.io/api/random.json").parsed_response
 #puts @response., @response.code, @response.message, @response.headers.inspect
     #respond_to do |format|
       #format.JSON { render :json => JSON.parse(@response) }
       #format.html { render "index.html.erb"}
     #end
-  @question = @response[0].question
+  #@question = @response[0].question
+
+
   end
 
   def show

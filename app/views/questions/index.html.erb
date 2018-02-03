@@ -1,6 +1,13 @@
 <h1>Questions#index</h1>
 <p>Find me in app/views/questions/index.html.erb</p>
 
+<% @questions.each do |question| %>
+  <%= question["value"] %>:
+  <%= question["question"] %><br>
+<% end %>
 <%#= react_component("Title", { greeting: "Welcome to Jeopardy!" }) %>
 <%#= react_component("Game_Link") %>
-<%= @question %>
+<%#= @question %>
+
+<%#= @response = HTTParty.get("http://jservice.io/api/clues.json", { format: :json}))
+http_party_json = JSON.parse(@response.body)%>
