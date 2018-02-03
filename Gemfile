@@ -8,6 +8,7 @@ end
 #added gems
 #gem 'HTTParty'
 gem 'react-rails'
+gem 'webpacker'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
