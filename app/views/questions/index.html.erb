@@ -1,19 +1,17 @@
 <h1>Questions#index</h1>
 <p>Find me in app/views/questions/index.html.erb</p>
+<%= react_component("Question", {question: @questions}) %>
 
-<% @questions.first(100).each do |question| %>
+<%# @questions.first(100).each do |question| %>
 <%# if question["value"] != nil %>
-<% if question["category"]["title"] == "politics" %>
-  <%= question["category"]["title"].capitalize %>
-  <%= question["value"] %><br>
-  <li><%= question["question"] %></li><br>
-  <li><%= question["answer"] %></li>
+<%# if question["category"]["title"] == "politics" %>
+  <%#= question["category"]["title"].capitalize %>
+  <%#= question["value"] %><br>
+  <li><%#= question["question"] %></li><br>
+  <li><%#= question["answer"] %></li>
   <hr>
-  <% end %>
-<% end %>
+  <%# end %>
+<%# end %>
 <%#= react_component("Title", { greeting: "Welcome to Jeopardy!" }) %>
-<%#= react_component("Game_Link") %>
-<%#= @question %>
 
-<%#= @response = HTTParty.get("http://jservice.io/api/clues.json", { format: :json}))
-http_party_json = JSON.parse(@response.body)%>
+<%#= @question %>

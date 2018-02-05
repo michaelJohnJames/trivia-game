@@ -1,6 +1,6 @@
 class QuestionsController < ApplicationController
   def index
-    @questions = HTTParty.get('http://jservice.io/api/clues', :headers => {'Content-Type' => 'application/json'})
+    @questions = HTTParty.get('http://jservice.io/api/random', :headers => {'Content-Type' => 'application/json'})
 
 
 
