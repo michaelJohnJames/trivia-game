@@ -1,12 +1,11 @@
 class Question extends React.Component {
-  render () {
+  render () {;
     return (
-    <div>
-      <h1>@questions["category"][title].capitalize</h1>;
-      <h1>@questions["value"]</h1>
-      <h2>@questions["question"]</h2>
-    </div>
+      <div>
+      <h1>Question</h1>
+      <p>{this.props.question[0].question}</p>
+      </div>
 
-);
-}
+  );
+  }
 }
