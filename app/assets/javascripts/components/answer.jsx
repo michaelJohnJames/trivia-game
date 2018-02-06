@@ -1,21 +1,27 @@
 class Answer extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {value: ''};
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.state = {msg: ''};
+    this.checkAnswer = this.checkAnswer.bind(this);
   }
 
-  handleSubmit(e) {
-
+  checkAnswer(e) {
     //var message = document.getElementById('msg');
-    //this.setState({value: event.target.value})
+    //this.setState(prevState{msg.value: ''})
     //console.log(guesses.value);
     //console.log(this.props.answer[0].answer)
-    if ( guesses.value.includes(this.props.answer[0].answer)) {
-     console.log("You are correct!")
+    if ( this.props.answer[0].answer.includes(guesses.value)) {
+        this.setState(prevState => ({
+          msg: "You are correct!"
+        }));
+     //this.state = {msg.value: "You are correct!"}
     //  message.textContent = "You are correct!"
     } else {
-      console.log("You are wrong")
+      this.setState(prevState => ({
+        msg: "Sorry the answer is: " + this.props.answer[0].answer + "!"
+      }))
+      console.log("You are wrong");
+      console.log("msg.value");
     //  message.textContent = "Sorry, the answer is " + {this.props.answer[0].answer}
     }
     e.preventDefault();
@@ -26,12 +32,13 @@ class Answer extends React.Component {
   render () {
     return (
       <div>
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.checkAnswer}>
         <label>Enter your answer:</label><br></br>
         <input type="text" id="guesses" ></input><br></br>
         <input type="submit"></input>
       </form>
-      <p id="msg"></p>
+      <p id="msg">{this.state.msg}</p>
+
       </div>
 
     );
