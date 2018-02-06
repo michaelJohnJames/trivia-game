@@ -5,15 +5,17 @@
   question["title"]
   question["category"]["title"]
   end}) %>
+<%= react_component("Answer", {answer: @questions.each do |question|
+                                question["title"] end}) %>
 
 <%# @questions.first(100).each do |question| %>
 <%# if question["value"] != nil %>
 <%# if question["category"]["title"] == "politics" %>
   <%#= question["category"]["title"].capitalize %>
-  <%#= question["value"] %><br>
-  <li><%#= question["question"] %></li><br>
-  <li><%#= question["answer"] %></li>
-  <hr>
+  <%#= question["value"] %>
+  <%#= question["question"] %>
+  <%#= question["answer"] %>
+
   <%# end %>
 <%# end %>
 <%#= react_component("Title", { greeting: "Welcome to Jeopardy!" }) %>
