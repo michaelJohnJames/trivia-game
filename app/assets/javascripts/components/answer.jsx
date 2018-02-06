@@ -3,7 +3,7 @@ class Answer extends React.Component {
     return (
       <div>
 
-      <p>{this.props.answer[0].answer}</p>
+      <p>{this.props.answer[0].answer.HTML_safe}</p>
       <form>
         <label>Enter your answer:</label><br></br>
         <input type="text"></input><br></br>
