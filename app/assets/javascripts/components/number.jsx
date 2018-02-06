@@ -6,6 +6,13 @@ constructor(props) {
 }
 
 
+componentWillMount() {
+  this.setState(prevState => ({
+    counter: counter + 1
+})
+}
+
+
 render () {
   return (
     <div>
