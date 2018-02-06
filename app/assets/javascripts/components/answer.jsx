@@ -1,7 +1,7 @@
 class Answer extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {msg: '', counter: 0};
+    this.state = {msg: ''};
     this.checkAnswer = this.checkAnswer.bind(this);
   }
 
@@ -12,15 +12,14 @@ class Answer extends React.Component {
     //console.log(this.props.answer[0].answer)
     if ( this.props.answer[0].answer.includes(guesses.value)) {
         this.setState(prevState => ({
-          msg: "You are correct!",
-          counter: this.state.counter + 1
+          msg: "You are correct!"
           //counter: {this.state.counter}++
         }));
      //this.state = {msg.value: "You are correct!"}
     //  message.textContent = "You are correct!"
     } else {
       this.setState(prevState => ({
-        msg: "Sorry the answer is: " + this.props.answer[0].answer + "!"
+        msg: "Sorry the answer is: " + this.props.answer[0].answer + "!",
       }))
       console.log("You are wrong");
     //  message.textContent = "Sorry, the answer is " + {this.props.answer[0].answer}
@@ -33,7 +32,6 @@ class Answer extends React.Component {
   render () {
     return (
       <div>
-      <p id="q-counter">Question {this.state.counter} of 5</p>
       <form onSubmit={this.checkAnswer}>
         <label>Enter your answer:</label><br></br>
         <input type="text" id="guesses" ></input><br></br>
