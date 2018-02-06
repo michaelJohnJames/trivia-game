@@ -37,7 +37,7 @@ class Answer extends React.Component {
         <input type="text" id="guesses" ></input><br></br>
         <input type="submit"></input>
       </form>
-      <p id="msg">{this.state.msg}</p>
+      <p>{this.state.msg}</p>
 
       </div>
 
