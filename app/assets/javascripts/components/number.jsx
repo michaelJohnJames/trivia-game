@@ -1,15 +1,15 @@
 class Number extends React.Component {
 constructor(props) {
   super(props);
-  this.state = {counter: 1};
-  //this.checkAnswer = this.checkAnswer.bind(this);
+  this.state = {counter: 1}
+  this.setState = this.setState.bind(this);
 }
 
 
-componentWillMount() {
+setState(prevState) {
   this.setState(prevState => ({
-    counter: counter + 1
-})
+    counter: state.counter + 1
+}))
 }
 
 
