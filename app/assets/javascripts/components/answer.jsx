@@ -3,11 +3,18 @@ class Answer extends React.Component {
     super(props);
     this.state = {msg: '', counter: 1};
     this.checkAnswer = this.checkAnswer.bind(this);
+    this.addQuestion = this.addQuestion.bind(this);
+    this.myFunction = this.myFunction.bind(this);
     var x = 1;
   }
 
+  myFunction(e) {
+    checkAnswer(e);
+    addQuestion(e)
+  }
+
   checkAnswer(e) {
-    var x = 1;
+    //var x = 1;
     //var message = document.getElementById('msg');
     //this.setState(prevState{msg.value: ''})
     //console.log(guesses.value);
@@ -26,11 +33,17 @@ class Answer extends React.Component {
         counter: this.state.counter + 1
       }))
       //console.log("You are wrong");
-      x++;
+
     //  message.textContent = "Sorry, the answer is " + {this.props.answer[0].answer}
     }
     //e.preventDefault();
+    //x++;
+  }
 
+  addQuestion(e) {
+    var x = 1;
+    x++
+    console.log(x)
   }
 
 
@@ -39,7 +52,7 @@ class Answer extends React.Component {
     var x = 1;
     return (
       <div>
-      <form onSubmit={this.checkAnswer}>
+      <form onSubmit={this.addQuestion}>
         <label>Enter your answer:</label><br></br>
         <input type="text" id="guesses" ></input><br></br>
         <input type="submit"></input>
