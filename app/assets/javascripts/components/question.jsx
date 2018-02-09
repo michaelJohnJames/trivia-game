@@ -17,6 +17,7 @@ class Question extends React.Component {
 
 
   render () {
+    //this.forceUpdate();
     //if ({this.props.question[0].value} === null) {return "no"}
     return (
       <div>
