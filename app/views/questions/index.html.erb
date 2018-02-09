@@ -1,13 +1,14 @@
 <h1>Questions#index</h1>
 <p>Find me in app/views/questions/index.html.erb</p>
-<%= react_component("Number", {question: @questions.each do |question|
-                    question["title"] end}) %>
+
 <%= react_component("Question",
   {question: @questions.each do |question|
   question["title"]
   question["category"]["title"]
   end}) %>
 <%= react_component("Answer", {answer: @questions.each do |question|
+                                question["title"] end}) %>
+<%= react_component("Number", {question: @questions.each do |question|
                                 question["title"] end}) %>
 
 <%# @questions.first(100).each do |question| %>
