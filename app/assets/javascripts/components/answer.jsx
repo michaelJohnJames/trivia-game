@@ -52,7 +52,7 @@ class Answer extends React.Component {
     var x = 1;
     return (
       <div>
-      <form onSubmit={this.addQuestion}>
+      <form onSubmit={this.checkAnswer}>
         <label>Enter your answer:</label><br></br>
         <input type="text" id="guesses" ></input><br></br>
         <input type="submit"></input>
